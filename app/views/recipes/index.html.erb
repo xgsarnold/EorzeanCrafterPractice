@@ -10,11 +10,10 @@
   </thead>
 
   <tbody>
-    <% @recipes.each do |recipe| %>
+    <% @recipe_list.each do |recipe| %>
       <tr>
-        <td><%= link_to 'Show', recipe %></td>
-        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
-        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= recipe["name"] %></td>
+        <!-- <td><%= link_to 'Show', recipe %></td> -->
       </tr>
     <% end %>
   </tbody>

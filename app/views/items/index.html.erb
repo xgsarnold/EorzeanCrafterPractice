@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @items.response.each do |item| %>
+      <tr>
+        <td><%= item["name"] %></td>
+        <td><%= link_to "Recipe", item_path(item["id"]) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Item', new_item_path %>

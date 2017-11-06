@@ -4,7 +4,8 @@ class RecipesController < ApplicationController
   # GET /recipes
   # GET /recipes.json
   def index
-    @recipes = Recipe.all
+    @recipes = Recipe.new
+    @recipe_list = @recipes.recipe_list.sort.uniq
   end
 
   # GET /recipes/1
