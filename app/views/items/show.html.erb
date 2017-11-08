@@ -1,5 +1,8 @@
 <h1><%= @recipe.name %> </h1>
 
+<h2>Recipe Info</h2>
+<p><%= @recipe %></p>
+
 <% @recipe.response["tree"].each do |tree| %>
 <p><%= tree["name"] %> | <%= tree["quantity"] %></p>
 <% end %>

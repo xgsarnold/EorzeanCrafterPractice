@@ -11,6 +11,18 @@ class Recipe
     @response["name"]
   end
 
+  def primary_class
+    @response["class_name"]
+  end
+
+  def difficulty
+    @response["difficulty"]
+  end
+
+  def durability
+    @response["durability"]
+  end
+
   def ingredients
     ingredients = []
     quantities = []
